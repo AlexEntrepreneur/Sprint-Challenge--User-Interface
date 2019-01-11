@@ -1,4 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -12,8 +12,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -24,7 +24,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -54,6 +54,7 @@ table {
 html, body {
     height: 100%;
     font-family: 'Roboto', sans-serif;
+		color: black;
 }
 
 h1, h2, h3, h4, h5 {
@@ -64,11 +65,60 @@ h1, h2, h3, h4, h5 {
 
 p {
     line-height: 1.4;
+		margin-bottom: 23px;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+figure {
+	margin-bottom: 25px;
 }
 
 .container {
     width: 800px;
     margin: 0 auto;
+}
+
+button {
+	padding: 8px 25px;
+	font-size: 14px;
+	border-radius: 8px;
+	margin-bottom: 23px;
+	background-color: white;
+	border: 2px solid black;
+}
+
+button:hover {
+	background-color: #e3e3e3;
+}
+
+header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100px;
+}
+
+header .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	flex-grow: 1;
+	max-width: 800px;
+}
+
+header nav {
+	display: flex;
+	justify-content: space-between;
+	flex-grow: 1;
+	max-width: calc(100% - 202px);	/* 202px = logo width + 45px right margin */
+}
+
+header nav a {
+	margin-right: 40px;
 }
 
 .top-content {
@@ -80,9 +130,8 @@ p {
 }
 
 .top-content .text-container {
-    width: 48%;
     padding: 0 1%;
-    padding-bottom: 20px;  
+    padding-bottom: 20px;
 }
 
 .middle-content {
@@ -90,7 +139,7 @@ p {
     border-bottom: 1px dashed black;
 }
 
-.middle-content h2 {
+.middle-content > h2 {
     padding: 0 2%;
     margin-bottom: 0;
 }
@@ -112,6 +161,46 @@ p {
     justify-content: center;
 }
 
+.middle-content .boxes .box:nth-child(1) {
+	background-color: teal;
+}
+
+.middle-content .boxes .box:nth-child(2) {
+	background-color: gold;
+}
+
+.middle-content .boxes .box:nth-child(3) {
+	background-color: cadetblue;
+}
+
+.middle-content .boxes .box:nth-child(4) {
+	background-color: coral;
+}
+
+.middle-content .boxes .box:nth-child(5) {
+	background-color: crimson;
+}
+
+.middle-content .boxes .box:nth-child(6) {
+	background-color: forestgreen;
+}
+
+.middle-content .boxes .box:nth-child(7) {
+	background-color: darkorchid;
+}
+
+.middle-content .boxes .box:nth-child(8) {
+	background-color: hotpink;
+}
+
+.middle-content .boxes .box:nth-child(9) {
+	background-color: indigo;
+}
+
+.middle-content .boxes .box:nth-child(10) {
+	background-color: dodgerblue;
+}
+
 .bottom-content {
     display: flex;
     margin: 0 2% 20px;
@@ -124,6 +213,50 @@ p {
 
 .bottom-content .text-container:last-child {
     padding-right: 0;
+}
+
+.middle-content.about-page {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.middle-content.contact-page h2 {
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.contact-grid {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.contact-grid .grid-item {
+	width: calc(33.3% - 15px);
+	margin-bottom: 23px;
+	padding-top: 23px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: dodgerblue;
+	color: white;
+}
+
+.contact-grid .grid-item .icon {
+	max-width: 50%;
+	filter: invert(1);
+}
+
+.contact-grid .grid-item p {
+	font-size: 20px;
+}
+
+.post-snippet {
+	border-bottom: 1px dashed black;
+	margin-bottom: 3.5%;
 }
 
 footer {
@@ -143,4 +276,20 @@ footer nav {
 footer nav a {
     color: white;
     text-decoration: none;
+}
+
+.full-width {
+	width: 100%;
+}
+
+.half-width {
+	width: 48%;
+}
+
+.no-margin {
+	margin: 0;
+}
+
+.no-border {
+	border: 0;
 }
