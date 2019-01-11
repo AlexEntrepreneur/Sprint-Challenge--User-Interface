@@ -76,14 +76,6 @@ figure {
 	margin-bottom: 25px;
 }
 
-.full-width {
-	width: 100%;
-}
-
-.no-margin {
-	margin: 0;
-}
-
 .container {
     width: 800px;
     margin: 0 auto;
@@ -124,7 +116,6 @@ header nav a {
 }
 
 .top-content .text-container {
-    width: 48%;
     padding: 0 1%;
     padding-bottom: 20px;
 }
@@ -227,4 +218,20 @@ footer nav {
 footer nav a {
     color: white;
     text-decoration: none;
+}
+
+.full-width {
+	width: 100%;
+}
+
+.half-width {
+	width: 48%;
+}
+
+.no-margin {
+	margin: 0;
+}
+
+.no-border {
+	border: 0;
 }
